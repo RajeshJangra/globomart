@@ -1,14 +1,12 @@
 package globomart.domain;
 
-import java.util.Set;
-
 /**
  * Created by rajeshkumar on 03/06/17.
  */
-public class Country {
+public class Category {
     private long id;
     private String name;
-    private Set<State> states;
+    private String descriptiond;
 
     public long getId() {
         return id;
@@ -26,11 +24,11 @@ public class Country {
         this.name = name;
     }
 
-    public Set<State> getStates() {
-        return states;
+    public String getDescriptiond() {
+        return descriptiond;
     }
 
-    public void setStates(final Set<State> states) {
-        this.states = states;
+    public void setDescriptiond(final String descriptiond) {
+        this.descriptiond = descriptiond;
     }
 }
