@@ -1,14 +1,19 @@
 package com.globomart.domain;
 
+import javax.persistence.*;
+
 /**
  * Created by rajeshkumar on 03/06/17.
  */
+@Entity
 public class OrderItem {
+    @Id
     private long id;
+    @OneToOne
     private Product product;
-    private Order order;
+    @Column
     private long quantity;
-    private double price;
+    @ManyToOne
     private OrderItemStatus orderItemStatus;
 
     public long getId() {
@@ -27,28 +32,12 @@ public class OrderItem {
         this.product = product;
     }
 
-    public Order getOrder() {
-        return order;
-    }
-
-    public void setOrder(final Order order) {
-        this.order = order;
-    }
-
     public long getQuantity() {
         return quantity;
     }
 
     public void setQuantity(final long quantity) {
         this.quantity = quantity;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(final double price) {
-        this.price = price;
     }
 
     public OrderItemStatus getOrderItemStatus() {

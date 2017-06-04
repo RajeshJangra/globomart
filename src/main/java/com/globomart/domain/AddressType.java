@@ -1,11 +1,19 @@
 package com.globomart.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * Created by rajeshkumar on 03/06/17.
  */
+@Entity
 public class AddressType {
+    @Id
     private long id;
+    @Column
     private String name;
+    @Column
     private String description;
 
     public long getId() {

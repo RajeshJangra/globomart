@@ -1,5 +1,7 @@
 package com.globomart.domain;
 
+import org.springframework.data.geo.Point;
+
 import javax.persistence.*;
 
 /**
@@ -19,14 +21,16 @@ public class Address {
     private String addressLine2;
     @Column
     private String addressLine3;
+    @Column
+    private Point location;
 
-    @OneToOne
+    @ManyToOne
     private AddressType addressType;
-    @OneToOne
+    @ManyToOne
     private City city;
-    @OneToOne
+    @ManyToOne
     private State state;
-    @OneToOne
+    @ManyToOne
     private Country country;
 
     public long getId() {
@@ -63,6 +67,14 @@ public class Address {
 
     public String getAddressLine3() {
         return addressLine3;
+    }
+
+    public Point getLocation() {
+        return location;
+    }
+
+    public void setLocation(final Point location) {
+        this.location = location;
     }
 
     public void setAddressLine3(final String addressLine3) {

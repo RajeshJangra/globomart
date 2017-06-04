@@ -1,16 +1,21 @@
 package com.globomart.domain;
 
+import javax.persistence.*;
 import java.util.Date;
-import java.util.Set;
 
 /**
  * Created by rajeshkumar on 03/06/17.
  */
+@Entity
 public class Shipment {
+    @Id
+    @GeneratedValue
     private long id;
-    private Set<Order> orders;
+    @OneToOne
     private Invoice invoice;
-    private Date date;
+    @Column
+    private Date shipmentDate;
+    @OneToOne
     private Address address;
 
     public long getId() {
@@ -21,14 +26,6 @@ public class Shipment {
         this.id = id;
     }
 
-    public Set<Order> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(final Set<Order> orders) {
-        this.orders = orders;
-    }
-
     public Invoice getInvoice() {
         return invoice;
     }
@@ -37,12 +34,12 @@ public class Shipment {
         this.invoice = invoice;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getShipmentDate() {
+        return shipmentDate;
     }
 
-    public void setDate(final Date date) {
-        this.date = date;
+    public void setShipmentDate(final Date shipmentDate) {
+        this.shipmentDate = shipmentDate;
     }
 
     public Address getAddress() {

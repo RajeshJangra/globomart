@@ -1,24 +1,38 @@
 package com.globomart.domain;
 
+import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
 
 /**
  * Created by rajeshkumar on 03/06/17.
  */
+@Entity
 public class Customer {
+    @Id
+    @GeneratedValue
     private long id;
+    @Column
     private String firstName;
+    @Column
     private String lastName;
+    @ManyToOne
     private Gender gender;
+    @Column
     private String email;
+    @Column
     private Date dateOfBirth;
+    @Column
     private String contactPhone;
 
+    @OneToOne
     private LoginUser loginUser;
+    @OneToMany
     private Set<Address> addresses;
+    @OneToMany
     private Set<WishList> wishLists;
-    private Set<Order> orders;
+    @OneToMany
+    private Set<CustomerOrder> orders;
 
     public long getId() {
         return id;
@@ -100,11 +114,11 @@ public class Customer {
         this.wishLists = wishLists;
     }
 
-    public Set<Order> getOrders() {
+    public Set<CustomerOrder> getOrders() {
         return orders;
     }
 
-    public void setOrders(final Set<Order> orders) {
+    public void setOrders(final Set<CustomerOrder> orders) {
         this.orders = orders;
     }
 }

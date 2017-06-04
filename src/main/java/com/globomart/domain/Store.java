@@ -3,16 +3,20 @@ package com.globomart.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 /**
- * Created by rajeshkumar on 03/06/17.
+ * Created by rajeshkumar on 04/06/17.
  */
 @Entity
-public class Country {
+public class Store {
     @Id
     private long id;
     @Column
     private String name;
+
+    @OneToOne
+    private Address address;
 
     public long getId() {
         return id;
@@ -30,4 +34,11 @@ public class Country {
         this.name = name;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(final Address address) {
+        this.address = address;
+    }
 }

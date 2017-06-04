@@ -1,10 +1,19 @@
 package com.globomart.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  * Created by rajeshkumar on 03/06/17.
  */
+@Entity
 public class Gender {
+    @Id
+    @GeneratedValue
     private long id;
+    @Column
     private String name;
 
     public long getId() {

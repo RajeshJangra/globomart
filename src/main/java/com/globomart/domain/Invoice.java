@@ -1,15 +1,23 @@
 package com.globomart.domain;
 
+import javax.persistence.*;
 import java.util.Date;
 
 /**
  * Created by rajeshkumar on 03/06/17.
  */
+@Entity
 public class Invoice {
+    @Id
+    @GeneratedValue
     private long id;
-    private Order order;
-    private InvoiceStatus invoiceStatus;
+    @Column
     private Date invoiceDate;
+
+    @OneToOne
+    private CustomerOrder customerOrder;
+    @OneToOne
+    private InvoiceStatus invoiceStatus;
 
     public long getId() {
         return id;
@@ -19,12 +27,12 @@ public class Invoice {
         this.id = id;
     }
 
-    public Order getOrder() {
-        return order;
+    public CustomerOrder getCustomerOrder() {
+        return customerOrder;
     }
 
-    public void setOrder(final Order order) {
-        this.order = order;
+    public void setCustomerOrder(final CustomerOrder customerOrder) {
+        this.customerOrder = customerOrder;
     }
 
     public InvoiceStatus getInvoiceStatus() {

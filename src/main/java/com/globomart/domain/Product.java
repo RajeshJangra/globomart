@@ -1,16 +1,30 @@
 package com.globomart.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.Set;
+
 /**
  * Created by rajeshkumar on 03/06/17.
  */
+@Entity
 public class Product {
+    @Id
     private long id;
-    private Category category;
+    @Column
     private String name;
+    @Column
     private double price;
+    @Column
     private String color;
+    @Column
     private int size;
+    @Column
     private String description;
+    @OneToMany
+    private Set<Category> categories;
 
     public long getId() {
         return id;
@@ -20,12 +34,12 @@ public class Product {
         this.id = id;
     }
 
-    public Category getCategory() {
-        return category;
+    public Set<Category> getCategories() {
+        return categories;
     }
 
-    public void setCategory(final Category category) {
-        this.category = category;
+    public void setCategories(final Set<Category> categories) {
+        this.categories = categories;
     }
 
     public String getName() {

@@ -1,18 +1,29 @@
 package com.globomart.domain;
 
+import javax.persistence.*;
 import java.util.Date;
 
 /**
  * Created by rajeshkumar on 04/06/17.
  */
+@Entity
 public class Payment {
-
+    @Id
+    @GeneratedValue
     private long id;
-    private String referenceCode;
-    private PaymentMethod paymentMethod;
+    @Column
+    private String transactionId;
+    @Column
     private Date paymentDate;
+    @Column
     private double amount;
+
+    @OneToOne
+    private PaymentMethod paymentMethod;
+    @ManyToOne
     private PaymentStatus paymentStatus;
+    @OneToOne
+    private Invoice invoice;
 
     public long getId() {
         return id;
@@ -22,12 +33,12 @@ public class Payment {
         this.id = id;
     }
 
-    public String getReferenceCode() {
-        return referenceCode;
+    public String getTransactionId() {
+        return transactionId;
     }
 
-    public void setReferenceCode(final String referenceCode) {
-        this.referenceCode = referenceCode;
+    public void setTransactionId(final String transactionId) {
+        this.transactionId = transactionId;
     }
 
     public PaymentMethod getPaymentMethod() {
@@ -61,5 +72,15 @@ public class Payment {
     public void setPaymentStatus(final PaymentStatus paymentStatus) {
         this.paymentStatus = paymentStatus;
     }
+
+    public Invoice getInvoice() {
+        return invoice;
+    }
+
+    public void setInvoice(final Invoice invoice) {
+        this.invoice = invoice;
+    }
+
+
 }
 

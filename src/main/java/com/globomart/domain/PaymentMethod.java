@@ -1,11 +1,18 @@
 package com.globomart.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * Created by rajeshkumar on 03/06/17.
  */
+@Entity
 public class PaymentMethod {
+    @Id
     private long id;
-    private String type;
+    @Column
+    private String methodType;
 
     public long getId() {
         return id;
@@ -15,11 +22,11 @@ public class PaymentMethod {
         this.id = id;
     }
 
-    public String getType() {
-        return type;
+    public String getMethodType() {
+        return methodType;
     }
 
-    public void setType(final String type) {
-        this.type = type;
+    public void setMethodType(final String methodType) {
+        this.methodType = methodType;
     }
 }

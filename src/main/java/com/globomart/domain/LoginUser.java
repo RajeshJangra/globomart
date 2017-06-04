@@ -1,15 +1,25 @@
 package com.globomart.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.Set;
 
 /**
  * Created by rajeshkumar on 03/06/17.
  */
+@Entity
 public class LoginUser {
 
+    @Id
     private String loginId;
+    @Column
     private String loginPassword;
+    @Column
     private boolean loginEnabled;
+
+    @OneToMany
     private Set<Roles> roles;
 
     public String getLoginId() {
