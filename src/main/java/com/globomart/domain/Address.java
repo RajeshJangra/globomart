@@ -1,20 +1,32 @@
-package globomart.domain;
+package com.globomart.domain;
+
+import javax.persistence.*;
 
 /**
  * Created by rajeshkumar on 03/06/17.
  */
+
+@Entity
 public class Address {
 
+    @Id
+    @GeneratedValue
     private long id;
 
-    private AddressType addressType;
-
+    @Column
     private String addressLine1;
+    @Column
     private String addressLine2;
+    @Column
     private String addressLine3;
 
+    @OneToOne
+    private AddressType addressType;
+    @OneToOne
     private City city;
+    @OneToOne
     private State state;
+    @OneToOne
     private Country country;
 
     public long getId() {

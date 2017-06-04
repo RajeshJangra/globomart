@@ -1,4 +1,4 @@
-package globomart.domain;
+package com.globomart.domain;
 
 /**
  * Created by rajeshkumar on 03/06/17.

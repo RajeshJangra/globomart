@@ -1,13 +1,13 @@
-package globomart.domain;
+package com.globomart.domain;
 
 /**
- * Created by rajeshkumar on 04/06/17.
+ * Created by rajeshkumar on 03/06/17.
  */
-public class PaymentStatus {
-
+public class State {
     private long id;
     private String name;
-    private String description;
+
+    private Country country;
 
     public long getId() {
         return id;
@@ -25,11 +25,12 @@ public class PaymentStatus {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public Country getCountry() {
+        return country;
     }
 
-    public void setDescription(final String description) {
-        this.description = description;
+    public void setCountry(final Country country) {
+        this.country = country;
     }
+
 }

@@ -1,4 +1,4 @@
-package globomart.domain;
+package com.globomart.domain;
 
 import java.util.Date;
 

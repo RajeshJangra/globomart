@@ -1,4 +1,4 @@
-package globomart.domain;
+package com.globomart.domain;
 
 import java.util.Date;
 
@@ -62,3 +62,4 @@ public class Payment {
         this.paymentStatus = paymentStatus;
     }
 }
+

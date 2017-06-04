@@ -1,11 +1,11 @@
-package globomart.domain;
+package com.globomart.domain;
 
 /**
  * Created by rajeshkumar on 03/06/17.
  */
-public class PaymentMethod {
+public class Roles {
     private long id;
-    private String type;
+    private String name;
 
     public long getId() {
         return id;
@@ -15,11 +15,11 @@ public class PaymentMethod {
         this.id = id;
     }
 
-    public String getType() {
-        return type;
+    public String getName() {
+        return name;
     }
 
-    public void setType(final String type) {
-        this.type = type;
+    public void setName(final String name) {
+        this.name = name;
     }
 }

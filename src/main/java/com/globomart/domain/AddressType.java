@@ -1,12 +1,12 @@
-package globomart.domain;
+package com.globomart.domain;
 
 /**
  * Created by rajeshkumar on 03/06/17.
  */
-public class City {
+public class AddressType {
     private long id;
     private String name;
-    private State state;
+    private String description;
 
     public long getId() {
         return id;
@@ -24,11 +24,11 @@ public class City {
         this.name = name;
     }
 
-    public State getState() {
-        return state;
+    public String getDescription() {
+        return description;
     }
 
-    public void setState(final State state) {
-        this.state = state;
+    public void setDescription(final String description) {
+        this.description = description;
     }
 }
