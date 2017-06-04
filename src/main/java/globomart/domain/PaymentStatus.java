@@ -1,11 +1,13 @@
 package globomart.domain;
 
 /**
- * Created by rajeshkumar on 03/06/17.
+ * Created by rajeshkumar on 04/06/17.
  */
-public class Roles {
+public class PaymentStatus {
+
     private long id;
     private String name;
+    private String description;
 
     public long getId() {
         return id;
@@ -21,5 +23,13 @@ public class Roles {
 
     public void setName(final String name) {
         this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(final String description) {
+        this.description = description;
     }
 }

@@ -13,10 +13,12 @@ public class Customer {
     private Gender gender;
     private String email;
     private Date dateOfBirth;
+    private String contactPhone;
 
     private LoginUser loginUser;
-
     private Set<Address> addresses;
+    private Set<WishList> wishLists;
+    private Set<Order> orders;
 
     public long getId() {
         return id;
@@ -66,6 +68,14 @@ public class Customer {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public String getContactPhone() {
+        return contactPhone;
+    }
+
+    public void setContactPhone(final String contactPhone) {
+        this.contactPhone = contactPhone;
+    }
+
     public LoginUser getLoginUser() {
         return loginUser;
     }
@@ -80,5 +90,21 @@ public class Customer {
 
     public void setAddresses(final Set<Address> addresses) {
         this.addresses = addresses;
+    }
+
+    public Set<WishList> getWishLists() {
+        return wishLists;
+    }
+
+    public void setWishLists(final Set<WishList> wishLists) {
+        this.wishLists = wishLists;
+    }
+
+    public Set<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(final Set<Order> orders) {
+        this.orders = orders;
     }
 }

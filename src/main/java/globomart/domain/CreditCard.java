@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by rajeshkumar on 03/06/17.
  */
-public class CreditCardPaymentMethod extends PaymentMethod {
+public class CreditCard extends PaymentMethod {
     private String nameOnCard;
     private String creditCardNo;
     private Date expiryDate;

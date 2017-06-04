@@ -6,7 +6,7 @@ package globomart.domain;
 public class City {
     private long id;
     private String name;
-    private State stateId;
+    private State state;
 
     public long getId() {
         return id;
@@ -24,11 +24,11 @@ public class City {
         this.name = name;
     }
 
-    public State getStateId() {
-        return stateId;
+    public State getState() {
+        return state;
     }
 
-    public void setStateId(final State stateId) {
-        this.stateId = stateId;
+    public void setState(final State state) {
+        this.state = state;
     }
 }

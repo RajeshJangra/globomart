@@ -6,7 +6,7 @@ package globomart.domain;
 public class Category {
     private long id;
     private String name;
-    private String descriptiond;
+    private String description;
 
     public long getId() {
         return id;
@@ -24,11 +24,11 @@ public class Category {
         this.name = name;
     }
 
-    public String getDescriptiond() {
-        return descriptiond;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescriptiond(final String descriptiond) {
-        this.descriptiond = descriptiond;
+    public void setDescription(final String description) {
+        this.description = description;
     }
 }

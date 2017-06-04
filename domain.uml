@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>globomart.domain</OriginalElement>
+  <nodes>
+    <node x="799.9583333333334" y="289.0">globomart.domain.Roles</node>
+    <node x="39.477976190476284" y="443.0">globomart.domain.Address</node>
+    <node x="849.4565476190476" y="815.0">globomart.domain.OrderStatus</node>
+    <node x="1145.2083333333335" y="1079.0">globomart.domain.InvoiceStatus</node>
+    <node x="47.092261904761926" y="0.0">globomart.domain.Country</node>
+    <node x="1200.3113095238095" y="454.0">globomart.domain.Product</node>
+    <node x="75.06130952380954" y="804.0">globomart.domain.CreditCard</node>
+    <node x="890.2083333333334" y="1057.0">globomart.domain.Order</node>
+    <node x="608.9583333333334" y="509.0">globomart.domain.Gender</node>
+    <node x="770.9583333333334" y="487.0">globomart.domain.LoginUser</node>
+    <node x="305.06130952380954" y="815.0">globomart.domain.NetBanking</node>
+    <node x="857.4583333333334" y="1413.0">globomart.domain.Shipment</node>
+    <node x="98.59226190476193" y="123.0">globomart.domain.State</node>
+    <node x="1040.9583333333335" y="1246.0">globomart.domain.Invoice</node>
+    <node x="1202.3113095238095" y="278.0">globomart.domain.Category</node>
+    <node x="1002.3113095238097" y="498.0">globomart.domain.OrderItemStatus</node>
+    <node x="555.8113095238095" y="738.0">globomart.domain.Customer</node>
+    <node x="353.56130952380954" y="509.0">globomart.domain.PaymentMethod</node>
+    <node x="291.5922619047619" y="278.0">globomart.domain.AddressType</node>
+    <node x="42.875" y="278.0">globomart.domain.City</node>
+    <node x="1066.3113095238095" y="782.0">globomart.domain.OrderItem</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="globomart.domain.CreditCard" target="globomart.domain.PaymentMethod">
+      <point x="70.0" y="-58.5" />
+      <point x="250.06130952380954" y="718.0" />
+      <point x="372.06130952380954" y="718.0" />
+      <point x="-55.5" y="36.5" />
+    </edge>
+    <edge source="globomart.domain.OrderItem" target="globomart.domain.Product">
+      <point x="102.0" y="-80.5" />
+      <point x="1304.3113095238095" y="718.0" />
+      <point x="1336.8113095238095" y="718.0" />
+      <point x="45.5" y="91.5" />
+    </edge>
+    <edge source="globomart.domain.Address" target="globomart.domain.State">
+      <point x="43.5" y="-102.5" />
+      <point x="198.97797619047628" y="403.0" />
+      <point x="281.0922619047619" y="403.0" />
+      <point x="281.0922619047619" y="258.0" />
+      <point x="247.34226190476193" y="258.0" />
+      <point x="63.75" y="47.5" />
+    </edge>
+    <edge source="globomart.domain.City" target="globomart.domain.State">
+      <point x="35.5" y="-47.5" />
+      <point x="149.375" y="258.0" />
+      <point x="204.84226190476193" y="258.0" />
+      <point x="21.25" y="47.5" />
+    </edge>
+    <edge source="globomart.domain.OrderItem" target="globomart.domain.OrderItemStatus">
+      <point x="-102.0" y="-80.5" />
+      <point x="1100.3113095238095" y="718.0" />
+      <point x="1046.8113095238095" y="718.0" />
+      <point x="-44.5" y="47.5" />
+    </edge>
+    <edge source="globomart.domain.Order" target="globomart.domain.Customer">
+      <point x="-73.4375" y="-69.5" />
+      <point x="934.2708333333334" y="1027.0" />
+      <point x="759.8113095238095" y="1027.0" />
+      <point x="68.0" y="124.5" />
+    </edge>
+    <edge source="globomart.domain.Product" target="globomart.domain.Category">
+      <point x="-45.5" y="-91.5" />
+      <point x="-44.5" y="47.5" />
+    </edge>
+    <edge source="globomart.domain.State" target="globomart.domain.Country">
+      <point x="42.5" y="-47.5" />
+      <point x="226.09226190476193" y="103.0" />
+      <point x="171.34226190476193" y="103.0" />
+      <point x="53.25" y="36.5" />
+    </edge>
+    <edge source="globomart.domain.Address" target="globomart.domain.Country">
+      <point x="-72.5" y="-102.5" />
+      <point x="82.97797619047628" y="413.0" />
+      <point x="11.0" y="413.0" />
+      <point x="11.0" y="103.0" />
+      <point x="100.34226190476193" y="103.0" />
+      <point x="-17.75" y="36.5" />
+    </edge>
+    <edge source="globomart.domain.Shipment" target="globomart.domain.Invoice">
+      <point x="76.25" y="-69.5" />
+      <point x="1025.2083333333335" y="1393.0" />
+      <point x="1219.4583333333335" y="1393.0" />
+      <point x="59.5" y="58.5" />
+    </edge>
+    <edge source="globomart.domain.OrderItem" target="globomart.domain.Order">
+      <point x="102.0" y="80.5" />
+      <point x="1304.3113095238095" y="1037.0" />
+      <point x="1110.5208333333335" y="1037.0" />
+      <point x="102.8125" y="-69.5" />
+    </edge>
+    <edge source="globomart.domain.Shipment" target="globomart.domain.Order">
+      <point x="15.25" y="-69.5" />
+      <point x="964.2083333333334" y="1393.0" />
+      <point x="954.4583333333334" y="1393.0" />
+      <point x="954.4583333333334" y="1221.0" />
+      <point x="978.3333333333334" y="1221.0" />
+      <point x="-29.375" y="69.5" />
+    </edge>
+    <edge source="globomart.domain.Invoice" target="globomart.domain.InvoiceStatus">
+      <point x="29.75" y="-58.5" />
+      <point x="-44.5" y="47.5" />
+    </edge>
+    <edge source="globomart.domain.NetBanking" target="globomart.domain.PaymentMethod">
+      <point x="0.0" y="-47.5" />
+      <point x="-18.5" y="36.5" />
+    </edge>
+    <edge source="globomart.domain.Shipment" target="globomart.domain.Address">
+      <point x="-76.25" y="-69.5" />
+      <point x="872.7083333333334" y="1393.0" />
+      <point x="53.56130952380954" y="1393.0" />
+      <point x="53.56130952380954" y="718.0" />
+      <point x="58.811309523809655" y="718.0" />
+      <point x="-96.66666666666663" y="102.5" />
+    </edge>
+    <edge source="globomart.domain.LoginUser" target="globomart.domain.Roles">
+      <point x="-50.0" y="-58.5" />
+      <point x="820.9583333333334" y="423.0" />
+      <point x="835.4583333333334" y="423.0" />
+      <point x="-35.5" y="36.5" />
+    </edge>
+    <edge source="globomart.domain.Customer" target="globomart.domain.PaymentMethod">
+      <point x="-51.0" y="-124.5" />
+      <point x="640.8113095238095" y="688.0" />
+      <point x="446.06130952380954" y="688.0" />
+      <point x="18.5" y="36.5" />
+    </edge>
+    <edge source="globomart.domain.Customer" target="globomart.domain.Gender">
+      <point x="51.0" y="-124.5" />
+      <point x="742.8113095238095" y="718.0" />
+      <point x="715.4583333333334" y="718.0" />
+      <point x="35.5" y="36.5" />
+    </edge>
+    <edge source="globomart.domain.Invoice" target="globomart.domain.Order">
+      <point x="-29.75" y="-58.5" />
+      <point x="1130.2083333333335" y="1221.0" />
+      <point x="1095.8333333333335" y="1221.0" />
+      <point x="88.125" y="69.5" />
+    </edge>
+    <edge source="globomart.domain.Customer" target="globomart.domain.LoginUser">
+      <point x="119.0" y="-124.5" />
+      <point x="810.8113095238095" y="718.0" />
+      <point x="920.9583333333334" y="718.0" />
+      <point x="50.0" y="58.5" />
+    </edge>
+    <edge source="globomart.domain.Order" target="globomart.domain.OrderItem">
+      <point x="14.6875" y="-69.5" />
+      <point x="1022.3958333333334" y="1007.0" />
+      <point x="1100.3113095238095" y="1007.0" />
+      <point x="-102.0" y="80.5" />
+    </edge>
+    <edge source="globomart.domain.Address" target="globomart.domain.City">
+      <point x="14.5" y="-102.5" />
+      <point x="169.97797619047628" y="423.0" />
+      <point x="149.375" y="423.0" />
+      <point x="35.5" y="47.5" />
+    </edge>
+    <edge source="globomart.domain.CreditCard" target="globomart.domain.Address">
+      <point x="-70.0" y="-58.5" />
+      <point x="110.06130952380954" y="718.0" />
+      <point x="136.14464285714297" y="718.0" />
+      <point x="-19.33333333333333" y="102.5" />
+    </edge>
+    <edge source="globomart.domain.Address" target="globomart.domain.AddressType">
+      <point x="72.5" y="-102.5" />
+      <point x="227.97797619047628" y="413.0" />
+      <point x="336.0922619047619" y="413.0" />
+      <point x="-44.5" y="47.5" />
+    </edge>
+    <edge source="globomart.domain.Customer" target="globomart.domain.Address">
+      <point x="-85.0" y="-124.5" />
+      <point x="606.8113095238095" y="698.0" />
+      <point x="252.1446428571429" y="698.0" />
+      <point x="96.66666666666666" y="102.5" />
+    </edge>
+    <edge source="globomart.domain.Order" target="globomart.domain.OrderStatus">
+      <point x="-44.0625" y="-69.5" />
+      <point x="963.6458333333334" y="1017.0" />
+      <point x="893.9565476190476" y="1017.0" />
+      <point x="-44.5" y="47.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="481.0" y="479.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
