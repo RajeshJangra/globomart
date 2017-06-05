@@ -13,6 +13,10 @@ public class Invoice {
     private long id;
     @Column
     private Date invoiceDate;
+    @Column
+    private double tax;
+    @Column
+    private double amount;
 
     @OneToOne
     private CustomerOrder customerOrder;
@@ -49,5 +53,21 @@ public class Invoice {
 
     public void setInvoiceDate(final Date invoiceDate) {
         this.invoiceDate = invoiceDate;
+    }
+
+    public double getTax() {
+        return tax;
+    }
+
+    public void setTax(final double tax) {
+        this.tax = tax;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(final double amount) {
+        this.amount = amount;
     }
 }
